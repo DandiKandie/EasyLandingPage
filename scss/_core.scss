@@ -1,0 +1,22 @@
+body {
+	font-family: $default-font;
+	font-size: $default-font-size;
+	background-color: $light-gray;
+
+	width: 100vw;
+	min-height: 100vh;
+
+	overflow-x: hidden;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap; /* added line */
+	border: 0;
+}
