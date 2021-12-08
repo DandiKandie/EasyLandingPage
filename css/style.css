@@ -1,84 +1,13 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  height: 5rem;
+html,
+body {
+  overflow-x: hidden;
   width: 100vw;
-  position: relative;
-}
-nav .logo {
-  margin-inline-start: 2rem;
-}
-nav .primary-navigation {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-nav .primary-navigation li .nav-link {
-  display: inline-block;
-  margin-block-end: 1rem;
-  text-decoration: none;
-  color: #2d314d;
 }
 
-.mobile-nav-toggle {
-  display: none;
-}
-
-@media screen and (max-width: 50em) {
-  nav {
-    width: 100vw;
-  }
-
-  .primary-navigation {
-    position: absolute;
-    inset: 7rem 3rem;
-    background-color: white;
-    height: 30vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(120%);
-    transition: transform 500ms ease-in-out;
-  }
-  .primary-navigation[data-visible=true] {
-    transform: translateX(0%);
-  }
-  .primary-navigation li .nav-link {
-    display: inline-block;
-    margin-block-end: 1rem;
-    text-decoration: none;
-    color: #2d314d;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-    position: absolute;
-    z-index: 1000;
-    top: 1.8rem;
-    right: 3rem;
-    background-color: transparent;
-    background-image: url(../images/icon-hamburger.svg);
-    background-repeat: no-repeat;
-    background-size: 2rem;
-    border: 0;
-    width: 1.5rem;
-    aspect-ratio: 1;
-  }
-  .mobile-nav-toggle[aria-expanded=true] {
-    background-image: url(../images/icon-close.svg);
-    width: 1.9rem;
-  }
-}
 body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
   background-color: #f3f4f6;
-  width: 100vw;
-  min-height: 100vh;
-  overflow-x: hidden;
 }
 
 .sr-only {
@@ -92,6 +21,125 @@ body {
   white-space: nowrap;
   /* added line */
   border: 0;
+}
+
+.primary-header {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.primary-header .nav-container {
+  background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.primary-header .primary-logo {
+  margin: 2ch;
+  flex-shrink: 0;
+}
+.primary-header .primary-logo .logo-image {
+  flex-shrink: 0;
+}
+
+.navigation .primary-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.navigation .primary-navigation li .nav-link {
+  display: block;
+  text-decoration: none;
+  flex: 1 1 70%;
+}
+
+.primary-information {
+  text-align: center;
+  padding-bottom: 8rem;
+  max-width: 100vw;
+}
+.primary-information .background-images {
+  height: 50vh;
+  background-image: url(../images/image-mockups.png), url(../images/bg-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -10em, center -2em;
+}
+.primary-information h1 {
+  line-height: 1.2;
+  font-weight: 300;
+  color: #2d314d;
+}
+.primary-information p {
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+  font-size: 14px;
+  color: #9698a6;
+}
+.primary-information .btn {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  margin-top: 2rem;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 30px;
+  background: linear-gradient(to right, #31d35c, #2bb7da);
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 50em) {
+  .primary-navigation {
+    position: absolute;
+    inset: 5.5rem 3rem;
+    border-radius: 5px;
+    background-color: white;
+    height: 30vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(150%);
+    transition: transform 500ms ease-in-out;
+  }
+  .primary-navigation[data-visible=true] {
+    transform: translateX(0%);
+  }
+  .primary-navigation li {
+    margin-top: 0.5rem;
+  }
+  .primary-navigation li .nav-link {
+    display: inline-block;
+    color: #2d314d;
+  }
+  .primary-navigation .hidden {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    top: 1.5rem;
+    right: 2rem;
+    background-color: transparent;
+    background-image: url(../images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    border: 0;
+    width: 1.5rem;
+    aspect-ratio: 1;
+  }
+  .mobile-nav-toggle[aria-expanded=true] {
+    background-image: url(../images/icon-close.svg);
+    background-size: 2rem;
+    width: 2.1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

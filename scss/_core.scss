@@ -1,12 +1,13 @@
+html,
+body {
+	overflow-x: hidden;
+	width: 100vw;
+}
+
 body {
 	font-family: $default-font;
 	font-size: $default-font-size;
 	background-color: $light-gray;
-
-	width: 100vw;
-	min-height: 100vh;
-
-	overflow-x: hidden;
 }
 
 .sr-only {
